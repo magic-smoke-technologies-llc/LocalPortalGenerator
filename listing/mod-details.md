@@ -42,4 +42,4 @@ Items, Crafting, Quality of Life, Travel
 1.0: First release. Local Portal Generator, Portal Anchor, 20 portal worlds.
 
 ## Listing image
-`listing/portal_generator_listing.png` (placeholder, 1024x576). Replace it with an in-game shot of an open portal over the Generator before going public.
+`listing/portal_generator_listing.png`: 1920x1080 in-game shot of a Generator in the Office cafeteria with an Anteverse A Portal open over the pad (HighResShot, no HUD).
