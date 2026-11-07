@@ -43,4 +43,4 @@ Tired of trekking back through the Facility every time you need something from F
 1.0: First release. Local Portal Generator, Portal Anchor, 20 portal worlds.
 
 ## Listing image
-`listing/portal_generator_listing.png`: 1920x1080 in-game shot of a Generator in the Office cafeteria with an Anteverse A Portal open over the pad (HighResShot, no HUD).
+`listing/portal_generator_listing.png`: 1920x1080 illustration: the Generator pad and terminal with a portal above it, tethered to five destination windows (Flathill, The Night Realm, Dunkeltaler Forest, Far Garden, Voussoir), titled LOCAL PORTAL GENERATOR. Rendered with `listing_art.py` (Pillow), not a game capture.
