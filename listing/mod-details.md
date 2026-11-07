@@ -35,8 +35,9 @@ Tired of trekking back through the Facility every time you need something from F
 - The portal doesn't show which world it leads to, beyond the world's portal image where the game has one.
 - The open portal doesn't close automatically when the Generator loses power.
 
-## Tags (suggested; pick from mod.io's list for Abiotic Factor)
-Items, Crafting, Quality of Life, Travel
+## Tags
+- Type: Item
+- Item: Deployable, Recipe
 
 ## Version and changelog
 1.0: First release. Local Portal Generator, Portal Anchor, 20 portal worlds.
