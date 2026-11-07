@@ -1,6 +1,6 @@
 # Local Portal Generator
 
-An Abiotic Factor mod: a craftable item that opens a portal to any Portal World the players have already visited, so they don't have to travel there the long way.
+An Abiotic Factor mod: a craftable machine that opens a portal to any Portal World the players have Anchored, so they don't have to travel there the long way.
 
 ## Language
 
@@ -20,12 +20,12 @@ _Avoid_: World, level, map, vignette
 The fixed spot in a Portal World where a traveller arrives, the same spot its own portal lands you. A Portal World without an Entrance (Distant Shore, Tile) is not a destination.
 _Avoid_: Spawn, start point, landing
 
-**Visited**:
-A Portal World is Visited once anyone in the save has been there, including visits made before the mod was installed wherever the game recorded them. Visited is shared by every player in that save, and only a Visited Portal World can be a destination.
-_Avoid_: Discovered, unlocked, known
+**Anchored**:
+A Portal World is Anchored once someone has used the consumable there. Shared by every player in that save, and permanent.
+_Avoid_: Visited, discovered, unlocked
 
 **Destination**:
-A Portal World that is Visited and has an Entrance. The Generator's menu lists exactly the Destinations.
+A Portal World that has been Anchored and has an Entrance. The Generator cycles through exactly the Destinations.
 _Avoid_: Target, location, option
 
 **Sector**:

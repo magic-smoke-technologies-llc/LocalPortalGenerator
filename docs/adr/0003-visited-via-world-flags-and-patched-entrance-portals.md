@@ -1,3 +1,7 @@
+---
+status: superseded by ADR-0004
+---
+
 # Visited comes from world flags, with Visited flags added to the game's entrance portals
 
 A Destination is Visited when any of its game world flags is set, or our own `OCXX2_Visited_<Destination>` flag is. When a Generator loads, it fills the empty `WorldFlagToTriggerOnUse` on each Destination's real entrance portal (in the always-loaded Facility) with our flag, so normal trips through those portals record visits from then on. It never overwrites a flag the game already set (Alps, Anteverse C, Shadowgate, the Wall have their own). This is not saved into the portals; it is reapplied whenever a Generator loads. Chris chose this (Q21).
