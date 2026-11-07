@@ -12,7 +12,27 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
 
 ## Visited
 - `WorldFlagSubsystem` (Blueprint-callable `HasWorldFlag` / `SetWorldFlag`) holds per-save flags. Mods can add flags with `WorldFlagModRowAsset`.
-- Game flags seen for visits: `NightRealm_Entered`, `MirrorWorld_Entered`, `Tile_Entered`, `V_Signal_Entered`, `MapReveal_Flathill`, `Voussoir_Entered`. The full Destination → flag mapping is still to do.
+- In Python, get the subsystem with `unreal.find_object(None, world.get_path_name()+":WorldFlagSubsystem_0")`; `get_world_flags()` lists the set flags.
+- Destination → game flags that count as Visited (any one is enough; Chris chose to include MapReveal):
+  - AnteverseA: `MapReveal_AnteverseA`
+  - AnteverseB: `LABS_CompletedAnteverseB`, `MapReveal_AnteverseB`
+  - AnteverseC: `Plant_AnteC_Entered`
+  - Flathill: `Fog_Completed`, `Flathill_CornWeb`, `MapReveal_Flathill`
+  - Warehouse: `MapReveal_Warehouse`
+  - MirrorWorld: `MirrorWorld_Entered`
+  - Suomi: `Reactors_SG_Entered`, `MapReveal_Shadowgate`
+  - Train: `TrainCompletedOnce`
+  - Wall: `Residence_Wall`, `Wall_AG_met`, `MapReveal_Wall`
+  - NightRealm: `NightRealm_Entered`
+  - ArcadeWinter: `VWinter_Complete`, `VWinter_LamogiCave`
+  - Salem: `Salem_Complete`, `Salem_MetRiggs`
+  - V_INQ: `V_INQ_HastaMet`, `V_INQ_SunDiskTouched`
+  - V_Snowglobe: `SnowglobeComplete`
+  - V_ISLAND: `End_PostBoss_MetCahn_Island`, `End_PostBoss_MetJanet_Island`, `End_PostBoss_MetWitch_Island`, `End_PostBoss_MetRiggs_Island`
+  - V_SIGNAL: `V_Signal_Entered`
+  - Alps, HCabin, Rise, V_BOTANICAL: none; mod flag only.
+- Rejected as evidence: `*_Opened` / `*_PortalOpened` (portal opened, not entered), `Res_EnteredBotanicals` (could be the Facility Botanical Sector), `V_INQ_Entrance` (entry point opened).
+- `MapReveal_*` caveat: arriving at the Entrance does not set it, and no trigger inside V_FOG sets it (the only `Trigger_WorldFlag` is by the exit). Its source is unknown and may be outside the Portal World, so a world can appear before anyone has entered it.
 
 ## Crafting
 - Recipe tiers are `RecipeTags`: `Recipe.Office`, `Recipe.Labs`, `Recipe.Manufacturing`, `Recipe.Security`, `Recipe.Dam`, `Recipe.Residences`, `Recipe.Reactors`.
