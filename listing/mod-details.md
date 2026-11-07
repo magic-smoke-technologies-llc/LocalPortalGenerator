@@ -22,7 +22,7 @@ Tired of trekking back through the Facility every time you need something from F
 
 **Recipes** (Office tier, researched)
 - Local Portal Generator: 1 Power Cell, 4 Tech Scrap, 2 Circuit Boards, 1 Power Supply Unit
-- Portal Anchor: 2 Tech Scrap, 1 Circuit Board
+- Portal Anchor: 3 Anteverse Gems, 1 Personal Teleporter, 1 Desk Phone, 3 Metal Scrap
 
 **Good to know**
 - Portals are one-way. Come home through the world's own exit, as usual.
