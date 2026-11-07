@@ -3,7 +3,7 @@
 Abiotic Factor mod: a craftable deployable that opens a one-way Portal to any Visited Portal World. Built with the Abiotic Factor Mod Editor (MCP server `abiotic-mod-editor`).
 
 - **Vocabulary**: `CONTEXT.md` is the glossary. Use its terms (Portal World, Sector, Entrance, Visited, Destination, Generator, Portal) in code, assets and conversation.
-- **Decisions**: `docs/adr/` holds the hard-to-reverse ones; `.agents/design.md` holds every settled design choice. Read both before changing behaviour.
+- **Decisions**: `docs/adr/` holds the hard-to-reverse ones (ADR 0002 supersedes 0001); `.agents/design.md` holds every settled design choice. Read both before changing behaviour.
 - **Game internals**: `.agents/game-facts.md` lists verified tables, classes, functions and gotchas. Read it before searching the game again.
 - **Where we are**: `.agents/status.md` holds progress and next steps. Update it at the end of every session.
 

@@ -1,3 +1,7 @@
+---
+status: superseded by ADR-0002
+---
+
 # Travel by moving players to the game's Entrance teleporter, found live
 
 Every Portal World is a streaming sublevel of the always-loaded `Facility` map, so reaching one is a teleport within the same world, not a map change. The Generator moves players to the Portal World's Entrance teleporter and lets the game's own volume-based streaming and loading screen bring the world in. It finds that teleporter at runtime: `DT_Levels` row (Get Level Row) gives `EntranceTeleporter` (e.g. `fog_start`), then the `BP_Teleporter_ParentBP` actor whose `MyTeleporterID` matches it. All 20 Entrances live in the persistent `Facility` level, so they're always present. Verified in Play In Editor on 2026-11-07 (Flathill, from an unloaded state).
