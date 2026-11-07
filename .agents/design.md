@@ -7,6 +7,7 @@ Each line was decided by Chris during the grilling session on 2026-11-07. Terms 
 - Arrival is the Portal World's Entrance. Distant Shore and Tile have no Entrance, so they are excluded.
 - A Portal World becomes a Destination only once Anchored: someone used the consumable there (ADR 0004, Q22). Having visited doesn't count. Shared per save, permanent.
 - One generic consumable (Q23): using it inside a Portal World Anchors the world you're in (`LevelManagerSubsystem.FindLatestLevelPlayerIsIn`, upload-filter allowed), recorded with `SetWorldFlag` on our `OCXX2_` flag rows.
+- Anchor recipe (Q24): 2 Tech Scrap (`scrap_tech`), 1 Circuit Board (`circuitboard`); Office tier, researched, same as the Generator.
 
 ## The Generator
 - A deployable placed at base, not a handheld.
