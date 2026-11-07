@@ -12,6 +12,10 @@ _Avoid_: World, level, map, vignette
 The fixed spot in a Portal World where a traveller arrives, the same spot its own portal lands you. A Portal World without an Entrance (Distant Shore, Tile) is not a destination.
 _Avoid_: Spawn, start point, landing
 
+**Visited**:
+A Portal World is Visited once anyone in the save has been there. Visited is shared by every player in that save, and only a Visited Portal World can be a destination.
+_Avoid_: Discovered, unlocked, known
+
 **Sector**:
 A part of the Facility, such as Office, Labs, Dam or Security. Sectors are not destinations for the generator.
 _Avoid_: World, area, zone
