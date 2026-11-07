@@ -4,7 +4,13 @@ An Abiotic Factor mod. Build a **Local Portal Generator** at your base, carry a 
 
 ## mod.io
 
-Not uploaded yet. After the first upload, record the mod ID here and in `modio.json`.
+| | |
+|---|---|
+| Mod ID | **6510487** |
+| Game ID | 13105 (Abiotic Factor) |
+| Visibility | Private |
+
+The same ID is stored in `PortalGeneratorPeO4A/PortalGeneratorPeO4A.abfmod`, which the editor reads when updating the listing, and in `modio.json`.
 
 ## Using it
 
