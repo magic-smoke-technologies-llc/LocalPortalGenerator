@@ -20,9 +20,9 @@ Tired of trekking back through the Facility every time you need something from F
 4. Back at base, **tap F on the Generator's terminal**. Each tap opens the next anchored world's portal over the pad, and after the last one the portal switches off.
 5. **Walk into the portal.** It's the game's own portal to that world, with the same look, the same loading screen and the same arrival point as getting there the normal way.
 
-**Recipes** (Office tier, researched)
-- Local Portal Generator: 1 Power Cell, 4 Tech Scrap, 2 Circuit Boards, 1 Power Supply Unit
-- Portal Anchor: 3 Anteverse Gems, 1 Personal Teleporter, 1 Desk Phone, 3 Metal Scrap
+**Recipes** (researched at a crafting bench, Travel category)
+- Local Portal Generator (Office tier): 1 Power Cell, 4 Tech Scrap, 2 Circuit Boards, 1 Power Supply Unit
+- Portal Anchor (Labs tier): 3 Anteverse Gems, 1 Personal Teleporter, 1 Desk Phone, 3 Metal Scrap
 
 **Good to know**
 - Portals are one-way. Come home through the world's own exit, as usual.
