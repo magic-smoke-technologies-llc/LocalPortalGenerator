@@ -1,0 +1,6 @@
+# Unreal / editor output that should never ship or be committed
+*/Saved/
+*/Intermediate/
+*/DerivedDataCache/
+*/Binaries/
+*.tmp
