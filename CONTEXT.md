@@ -9,7 +9,7 @@ The craftable deployable a player builds and places at base. It is the only way 
 _Avoid_: Portal generator item, device, machine, teleporter
 
 **Portal**:
-The opening a Generator creates beside itself, leading one way to one chosen Portal World's Entrance. Coming back uses that Portal World's own exit.
+The opening a Generator creates beside itself, leading one way to one chosen Portal World's Entrance. It stays open until someone closes it at the Generator. Coming back uses that Portal World's own exit.
 _Avoid_: Gate, rift, teleporter, warp
 
 **Portal World**:
