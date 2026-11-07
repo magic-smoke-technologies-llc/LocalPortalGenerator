@@ -39,6 +39,11 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
 - Upload filter BLOCKS `AbioticGameInstance.DoesWorldSaveExist`, `AbioticGameInstance.WorldSaveMap` and `AbioticFunctionLibrary.GetWorldSaveFileList` (the per-level save files). Allowed: `WorldFlagSubsystem.HasWorldFlag`, `AbioticFunctionLibrary.GetLevelFileName`, `LevelManagerSubsystem.IsLevelLoaded`. `build_graph` reports blocked members on every build; check it.
 - `clear_test_save` resets the editor's Cascade test world (backups in `%USERPROFILE%\abf-mod-backups\test-saves`).
 
+## Buffs and consumables
+- Consumables apply `ConsumableData.BuffsToAdd` on use. A buff row's `BuffLogic_Object` is a Buff Object Blueprint (child of `BuffObject_ParentBP`, native `BuffDebuffObject`); its `Server_OnBuffApply(Character)` event runs on the server when the buff lands.
+- `LevelManagerSubsystem.FindLatestLevelPlayerIsIn(Player)` gives the player's level as a soft World; compare with `LevelMetadata.Level` via `Conv_SoftObjectReferenceToString`.
+- `iodinetablets` (`Item_Consumable_Offerable`) is a good non-food consumable template (use or give to another player).
+
 ## Crafting
 - Recipe tiers are `RecipeTags`: `Recipe.Office`, `Recipe.Labs`, `Recipe.Manufacturing`, `Recipe.Security`, `Recipe.Dam`, `Recipe.Residences`, `Recipe.Reactors`.
 - Reference recipes: `recipe_teleporterpad` (Reactors, hard research), `recipe_personalteleporter` (Labs, medium).
@@ -51,6 +56,9 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
 - List a cooked Blueprint's functions by iterating `unreal.ObjectIterator(unreal.Object)` for paths starting with the class path (functions show as `<Class>_C:<Name>`).
 
 ## Editor gotchas
+- `build_graph` raw nodes drop prop values (writes `CustomClass` with no `=value`). For `K2Node_GetSubsystem`: build with `out_file`, then set `CustomClass=/Script/CoreUObject.Class'<subsystem>'` and the ReturnValue pin's `PinSubCategoryObject` in the T3D, and `paste_graph` the file. `SubsystemBlueprintLibrary.GetWorldSubsystem` can't be used directly.
+- `WorldFlagRowHandle` isn't BlueprintType (no Make struct); use `WorldFlagHandleFunctionLibrary.Conv_NameToWorldFlag`. Same pattern for levels (`Conv_NameToLevel`).
+- `new_row_from` silently skipped a class-typed field (`BuffLogic_Object`); set it with `set_row` expressions and re-read the row.
 - `build_graph` / `discover_pins` probes fail with "window may not use the default layout" while Play In Editor is running. Stop Play first.
 - Blueprint variables can't be added from Python, and pasted variable nodes don't create them in this editor. Ask Chris to add them in My Blueprint > Variables.
 - On furniture, `InteractWith_B` shows as tap-F "interact" and packaging moves to hold-F.

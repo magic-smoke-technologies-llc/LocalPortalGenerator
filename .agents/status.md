@@ -14,9 +14,13 @@
 - Confirmed in game (2026-11-07): item, placement, power, recipe under Travel; tap F on the side Terminal opens a Flathill Portal over the pad; walking in loads Flathill.
 - Blueprint: `OpenPortal(Destination)` custom event + `InteractWith_B` (power-gated) calling it with "Flathill"; `CanInteractWith_B` override (Chris made it); variables `ActivePortal`, `PortalImageToUse`, `PortalBoxToUse` (Chris made them).
 
+- Portal Anchor built (untested): item `ItemTable_Pickups/portal_anchor` (Lodestone Fragment look) → buff `OCXX2_Buff_PortalAnchor` → `Blueprints/BuffObject_PortalAnchor` sets `OCXX2_Anchored_<Destination>` (20 rows in `DataTables/DT_WorldFlags`). Recipe `recipe_PortalAnchor`.
+- Generator cycle now only offers Anchored Destinations (`HasWorldFlag`), then off.
+
 ## Next
-1. Destination cycling on tap F (replace the hard-wired "Flathill"), with an "off" step. List popup later.
-2. Close the Portal when the Generator loses power or is packaged/destroyed.
-3. Visited: only list Visited Destinations; set the mod flag via `WorldFlagToTriggerOnUse`.
-4. Tint the Generator (material instance).
-5. Check whether a spawned Portal survives save/reload (ADR 0002 open question).
+1. Test Anchor end to end on the fresh test world.
+2. Don't consume the Anchor when used outside a Portal World or in an Anchored one (unverified whether possible); feedback message on success.
+3. Buff icon (still the Reaper panic icon); portal destination label.
+4. Close the Portal on power loss / packaging.
+5. Tint; save/reload check (ADR 0002).
+6. Later: list popup instead of cycling.
