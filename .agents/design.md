@@ -5,7 +5,7 @@ Each line was decided by Chris during the grilling session on 2026-11-07. Terms 
 ## Destinations
 - Portal Worlds only; Sectors are never Destinations.
 - Arrival is the Portal World's Entrance. Distant Shore and Tile have no Entrance, so they are excluded.
-- Visited is shared per save. Earlier visits count wherever the game recorded them (mapping in `game-facts.md`, MapReveal flags included); every Destination also gets a mod flag set on arrival.
+- Visited is shared per save: any game flag for that Destination (mapping in `game-facts.md`, MapReveal included), or our `OCXX2_Visited_<Destination>` flag, which the game's own entrance portals set once a Generator has patched them (ADR 0003).
 
 ## The Generator
 - A deployable placed at base, not a handheld.

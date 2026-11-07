@@ -22,6 +22,7 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
   - MirrorWorld: `MirrorWorld_Entered`
   - Suomi: `Reactors_SG_Entered`, `MapReveal_Shadowgate`
   - Train: `TrainCompletedOnce`
+  - Alps: `Voussoir_Entered` (set by its entrance portal)
   - Wall: `Residence_Wall`, `Wall_AG_met`, `MapReveal_Wall`
   - NightRealm: `NightRealm_Entered`
   - ArcadeWinter: `VWinter_Complete`, `VWinter_LamogiCave`
@@ -30,9 +31,13 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
   - V_Snowglobe: `SnowglobeComplete`
   - V_ISLAND: `End_PostBoss_MetCahn_Island`, `End_PostBoss_MetJanet_Island`, `End_PostBoss_MetWitch_Island`, `End_PostBoss_MetRiggs_Island`
   - V_SIGNAL: `V_Signal_Entered`
-  - Alps, HCabin, Rise, V_BOTANICAL: none; mod flag only.
+  - HCabin, Rise, V_BOTANICAL: none; mod flag only.
 - Rejected as evidence: `*_Opened` / `*_PortalOpened` (portal opened, not entered), `Res_EnteredBotanicals` (could be the Facility Botanical Sector), `V_INQ_Entrance` (entry point opened).
 - `MapReveal_*` caveat: arriving at the Entrance does not set it, and no trigger inside V_FOG sets it (the only `Trigger_WorldFlag` is by the exit). Its source is unknown and may be outside the Portal World, so a world can appear before anyone has entered it.
+
+- Entrance portals that already set a flag via `WorldFlagToTriggerOnUse`: Alps→`Voussoir_Entered`, AnteverseC→`Plant_AnteC_Entered`, Suomi→`Reactors_SG_Entered`, Wall→`Residence_Wall` (set going in). The rest are empty.
+- Upload filter BLOCKS `AbioticGameInstance.DoesWorldSaveExist`, `AbioticGameInstance.WorldSaveMap` and `AbioticFunctionLibrary.GetWorldSaveFileList` (the per-level save files). Allowed: `WorldFlagSubsystem.HasWorldFlag`, `AbioticFunctionLibrary.GetLevelFileName`, `LevelManagerSubsystem.IsLevelLoaded`. `build_graph` reports blocked members on every build; check it.
+- `clear_test_save` resets the editor's Cascade test world (backups in `%USERPROFILE%\abf-mod-backups\test-saves`).
 
 ## Crafting
 - Recipe tiers are `RecipeTags`: `Recipe.Office`, `Recipe.Labs`, `Recipe.Manufacturing`, `Recipe.Security`, `Recipe.Dam`, `Recipe.Residences`, `Recipe.Reactors`.
