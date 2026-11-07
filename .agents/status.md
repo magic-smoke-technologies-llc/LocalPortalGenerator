@@ -11,8 +11,12 @@
 - Travel proven feasible in Play (ADR 0001).
 - Destination → Visited flag mapping done (`game-facts.md`).
 
+- Confirmed in game (2026-11-07): item, placement, power, recipe under Travel; tap F on the side Terminal opens a Flathill Portal over the pad; walking in loads Flathill.
+- Blueprint: `OpenPortal(Destination)` custom event + `InteractWith_B` (power-gated) calling it with "Flathill"; `CanInteractWith_B` override (Chris made it); variables `ActivePortal`, `PortalImageToUse`, `PortalBoxToUse` (Chris made them).
+
 ## Next
-1. Confirm in-game: item, placement, mesh, power prompt, recipe. Then the tint (needs a material instance).
-2. Build the travel logic: Destination lookup, Entrance lookup, teleport.
-3. Build the Destination menu and Portal open/close/replace behaviour.
-4. Visited tracking with mod world flags.
+1. Destination menu (replace the hard-wired "Flathill"), with Close Portal.
+2. Close the Portal when the Generator loses power or is packaged/destroyed.
+3. Visited: only list Visited Destinations; set the mod flag via `WorldFlagToTriggerOnUse`.
+4. Tint the Generator (material instance).
+5. Check whether a spawned Portal survives save/reload (ADR 0002 open question).
