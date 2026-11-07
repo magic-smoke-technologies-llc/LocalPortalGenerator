@@ -15,7 +15,7 @@ Each line was decided by Chris during the grilling session on 2026-11-07. Terms 
 - Has a side Terminal; using it (E) opens a menu listing the Destinations plus a Close Portal option.
 
 ## The Portal
-- Is the game's own portal (`BP_Teleporter_ParentBP`) spawned beside the Generator, copying the real portal to that world (ADR 0002). Night Realm, Arcade Winter, Salem and Snowglobe have none, so they use the default portal look.
+- Is the game's own portal (`BP_Teleporter_ParentBP`) spawned floating over the Generator's pad (150 cm up; beside the pad clipped into walls), copying the real portal to that world (ADR 0002). Night Realm, Arcade Winter, Salem and Snowglobe have none, so they use the default portal look.
 - Entered by walking into it, exactly like the game's portals.
 - One-way. Players come home through the Portal World's own exit.
 - One Portal per Generator; choosing another Destination replaces it.

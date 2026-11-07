@@ -46,6 +46,9 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
 - List a cooked Blueprint's functions by iterating `unreal.ObjectIterator(unreal.Object)` for paths starting with the class path (functions show as `<Class>_C:<Name>`).
 
 ## Editor gotchas
+- `build_graph` / `discover_pins` probes fail with "window may not use the default layout" while Play In Editor is running. Stop Play first.
+- Blueprint variables can't be added from Python, and pasted variable nodes don't create them in this editor. Ask Chris to add them in My Blueprint > Variables.
+- On furniture, `InteractWith_B` shows as tap-F "interact" and packaging moves to hold-F.
 - Overriding an inherited function that has outputs (e.g. `CanInteractWith_B`) can't be done from Python (`add_function_graph` makes a new function, not an override) and the Override dropdown is a popup the MCP screenshot/keys can't drive. Ask Chris to do it: My Blueprint > Functions > Override.
 - `build_graph` with `clear=true` then re-pasting a custom event whose name still exists in the compiled class renames the new event to `CustomEvent`. Clear, compile, then paste; or check function names afterwards.
 - The Blueprint editor's Viewport preview doesn't refresh after Python adds components; spawn the class in the editor world to check real placement.
