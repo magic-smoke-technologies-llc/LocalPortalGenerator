@@ -24,6 +24,10 @@ _Avoid_: Spawn, start point, landing
 A Portal World is Visited once anyone in the save has been there, including visits made before the mod was installed wherever the game recorded them. Visited is shared by every player in that save, and only a Visited Portal World can be a destination.
 _Avoid_: Discovered, unlocked, known
 
+**Destination**:
+A Portal World that is Visited and has an Entrance. The Generator's menu lists exactly the Destinations.
+_Avoid_: Target, location, option
+
 **Sector**:
 A part of the Facility, such as Office, Labs, Dam or Security. Sectors are not destinations for the generator.
 _Avoid_: World, area, zone
