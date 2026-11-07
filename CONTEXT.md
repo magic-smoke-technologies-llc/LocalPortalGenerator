@@ -5,7 +5,7 @@ An Abiotic Factor mod: a craftable item that opens a portal to any Portal World 
 ## Language
 
 **Generator**:
-The craftable deployable a player builds and places at base. It is the only way to open a Portal.
+The craftable deployable a player builds and places at base. It is the only way to open a Portal, and it must be powered to do so.
 _Avoid_: Portal generator item, device, machine, teleporter
 
 **Portal**:
