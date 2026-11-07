@@ -16,7 +16,7 @@ Each line was decided by Chris during the grilling session on 2026-11-07. Terms 
 - Looks: the Teleporter Pad mesh with a different tint. A custom model can replace it later.
 - Must be powered to open a Portal.
 - Has a side Terminal. Tapping F on it (powered) cycles: each tap closes the current Portal and opens the next Visited Destination's Portal; after the last one the cycle goes to "off" (no Portal). Chris chose this over a menu for now (Q20).
-- Later upgrade: a list popup widget (Chris will do the widget layout by hand). `OpenPortal(Destination)` stays as the entry point so only the tap logic changes.
+- Planned (Chris, replaces tap-to-cycle entirely): interacting with the Terminal opens the game's in-world computer desktop with a "Portals" app listing Anchored Destinations by in-game name, plus Close Portal; picking one calls `OpenPortal`. Built on the game's terminal/OS system the way the Trader Holograms mod (mod.io 6472552) does: `Deployed_DatabaseTerminal` / `ComputerTerminal_ParentBP`, `W_OperatingSystem_Main`, `W_OsAppWrapper`, `I_TerminalApp`, `I_TerminalUse`. Cycling is removed once this works.
 
 ## The Portal
 - Is the game's own portal (`BP_Teleporter_ParentBP`) spawned floating over the Generator's pad (75 cm up, Chris's tuning; beside the pad clipped into walls), copying the real portal to that world (ADR 0002). Night Realm, Arcade Winter, Salem and Snowglobe have none, so they use the default portal look.

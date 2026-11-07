@@ -18,9 +18,9 @@
 - Generator cycle now only offers Anchored Destinations (`HasWorldFlag`), then off.
 
 ## Next
-1. Test Anchor end to end on the fresh test world.
+1. Recipe unlock: game unlocks a recipe only once ALL its ingredients have been picked up (`ItemsPickedUpArray`, `Server_CheckForNewInventedRecipes`). Chris wants any one ingredient to unlock the Anchor; candidate: link the Anchor recipe to the Generator's via `LinkedRecipesToUnlock`.
 2. Don't consume the Anchor when used outside a Portal World or in an Anchored one (unverified whether possible); feedback message on success.
 3. Buff icon (still the Reaper panic icon); portal destination label.
 4. Close the Portal on power loss / packaging.
 5. Tint; save/reload check (ADR 0002).
-6. Later: list popup instead of cycling.
+6. Terminal menu replacing cycling (design.md). Start by studying how `Deployed_DatabaseTerminal` opens `W_OperatingSystem_Main` and how apps plug in via `I_TerminalApp` / `I_TerminalUse`; route the pick to the server (e.g. `DeliverString`); test co-op.
