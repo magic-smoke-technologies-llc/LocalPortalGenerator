@@ -13,7 +13,7 @@ The game's own portal, spawned by a Generator over its pad and entered by walkin
 _Avoid_: Gate, rift, teleporter, warp
 
 **Portal World**:
-A separate place reached through a portal, such as Flathill, Night Realm or Mirror World. These are the only destinations the generator can reach.
+A separate place reached through a portal, such as Flathill, The Night Realm or Dunkeltaler Forest. Players know them by their in-game names (see `.agents/game-facts.md`), not the game's internal row names. These are the only destinations the generator can reach.
 _Avoid_: World, level, map, vignette
 
 **Entrance**:

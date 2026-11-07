@@ -15,7 +15,7 @@ Tired of trekking back through the Facility every time you need something from F
 **How it works**
 
 1. **Craft a Local Portal Generator** at a crafting bench (Travel category) and place it at your base. It needs power.
-2. **Craft Portal Anchors** and take one with you to a portal world, such as Flathill, Night Realm or Mirror World.
+2. **Craft Portal Anchors** and take one with you to a portal world, such as Flathill, The Night Realm or Dunkeltaler Forest.
 3. **Use the Portal Anchor** while you're in that world. The world is now anchored for everyone in your save, for good.
 4. Back at base, **tap F on the Generator's terminal**. Each tap opens the next anchored world's portal over the pad, and after the last one the portal switches off.
 5. **Walk into the portal.** It's the game's own portal to that world, with the same look, the same loading screen and the same arrival point as getting there the normal way.
@@ -27,7 +27,7 @@ Tired of trekking back through the Facility every time you need something from F
 **Good to know**
 - Portals are one-way. Come home through the world's own exit, as usual.
 - Anchors are shared by everyone in the save and never wear off.
-- Supports 20 portal worlds: Flathill, Anteverse A, B and C, the Furniture Warehouse, Mirror World, Night Realm, the Alps, the Train, Shadowgate, the Wall, the Cabin, Rise, Arcade Winter, Salem, the Inquisition, Botanical, Snowglobe, Signal and the Island.
+- Supports 20 portal worlds: Flathill, Far Garden, The Mycofields, Village Den da'ko Yeer, Furniture Store, The World in the Mirror, The Night Realm, Voussoir, The Train, Shadowgate, GATE Arch Defense Facility, the hidden cabin, Rise, IS-0083, Canaan, The Praetorium, Divarication, North Pole, Dunkeltaler Forest and Albatross.
 - Pressing and holding F packages the Generator as normal.
 
 **Known limitations in 1.0**
