@@ -13,7 +13,7 @@ The fixed spot in a Portal World where a traveller arrives, the same spot its ow
 _Avoid_: Spawn, start point, landing
 
 **Visited**:
-A Portal World is Visited once anyone in the save has been there. Visited is shared by every player in that save, and only a Visited Portal World can be a destination.
+A Portal World is Visited once anyone in the save has been there, including visits made before the mod was installed wherever the game recorded them. Visited is shared by every player in that save, and only a Visited Portal World can be a destination.
 _Avoid_: Discovered, unlocked, known
 
 **Sector**:
