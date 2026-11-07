@@ -12,7 +12,8 @@ Each line was decided by Chris during the grilling session on 2026-11-07. Terms 
 - Office tier, researched. Recipe: 1 Power Cell (`powercell`), 4 Tech Scrap (`scrap_tech`), 2 Circuit Board (`circuitboard`), 1 Power Supply Unit (`powersupply`).
 - Looks: the Teleporter Pad mesh with a different tint. A custom model can replace it later.
 - Must be powered to open a Portal.
-- Has a side Terminal; using it (E) opens a menu listing the Destinations plus a Close Portal option.
+- Has a side Terminal. Tapping F on it (powered) cycles: each tap closes the current Portal and opens the next Visited Destination's Portal; after the last one the cycle goes to "off" (no Portal). Chris chose this over a menu for now (Q20).
+- Later upgrade: a list popup widget (Chris will do the widget layout by hand). `OpenPortal(Destination)` stays as the entry point so only the tap logic changes.
 
 ## The Portal
 - Is the game's own portal (`BP_Teleporter_ParentBP`) spawned floating over the Generator's pad (75 cm up, Chris's tuning; beside the pad clipped into walls), copying the real portal to that world (ADR 0002). Night Realm, Arcade Winter, Salem and Snowglobe have none, so they use the default portal look.

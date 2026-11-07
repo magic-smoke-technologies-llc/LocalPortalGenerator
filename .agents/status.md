@@ -15,7 +15,7 @@
 - Blueprint: `OpenPortal(Destination)` custom event + `InteractWith_B` (power-gated) calling it with "Flathill"; `CanInteractWith_B` override (Chris made it); variables `ActivePortal`, `PortalImageToUse`, `PortalBoxToUse` (Chris made them).
 
 ## Next
-1. Destination menu (replace the hard-wired "Flathill"), with Close Portal.
+1. Destination cycling on tap F (replace the hard-wired "Flathill"), with an "off" step. List popup later.
 2. Close the Portal when the Generator loses power or is packaged/destroyed.
 3. Visited: only list Visited Destinations; set the mod flag via `WorldFlagToTriggerOnUse`.
 4. Tint the Generator (material instance).
