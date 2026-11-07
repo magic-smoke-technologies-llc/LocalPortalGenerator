@@ -39,12 +39,16 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
 - Reference recipes: `recipe_teleporterpad` (Reactors, hard research), `recipe_personalteleporter` (Labs, medium).
 
 ## Interaction and power (Blueprint interfaces on AbioticDeployed_ParentBP)
-- `I_Interactable` (`/Game/Blueprints/Interfaces/I_Interactable`): `InteractWith_A` (interact key), `CanInteractWith_A`, `GetInteractText`, `LongInteractWith_A`, `RadialWheelInteractWith_A`, `DeliverString` / `DeliverInt` (how a menu popup hands a choice back).
+- `I_Interactable` (`/Game/Blueprints/Interfaces/I_Interactable`): on furniture, **A = F key = package** (handled by `AbioticDeployed_Furniture_ParentBP`; never override it) and **B = E key = use**. Use needs `CanInteractWith_B` returning true plus `InteractWith_B`. `InteractWith_B_LocalFX` runs on the interacting client (the Teleporter Pad opens its popup there); `DeliverString` / `DeliverInt` hand a popup's choice back. Also: `GetInteractText`, `LongInteractWith_A/B`, `RadialWheelInteractWith_A`.
+- Interaction needs a collision component with profile `InteractOnly` (the Teleporter Pad's `InteractHelper` box). Our Generator has one around its side `Terminal`.
 - `I_Powerable`: `IsPowered`, `TogglePowerFX`, `RequiresPowerSocket`.
 - Furniture power is the `RequiresPower` variable on `AbioticDeployed_Furniture_ParentBP`.
 - List a cooked Blueprint's functions by iterating `unreal.ObjectIterator(unreal.Object)` for paths starting with the class path (functions show as `<Class>_C:<Name>`).
 
 ## Editor gotchas
+- Overriding an inherited function that has outputs (e.g. `CanInteractWith_B`) can't be done from Python (`add_function_graph` makes a new function, not an override) and the Override dropdown is a popup the MCP screenshot/keys can't drive. Ask Chris to do it: My Blueprint > Functions > Override.
+- `build_graph` with `clear=true` then re-pasting a custom event whose name still exists in the compiled class renames the new event to `CustomEvent`. Clear, compile, then paste; or check function names afterwards.
+- The Blueprint editor's Viewport preview doesn't refresh after Python adds components; spawn the class in the editor world to check real placement.
 - The `abf-mod-editor` MCP tools `build_graph` and `discover_pins` probe pins in a throwaway Blueprint under `/Engine/Transient`, which the server's crash guard refused. Patched on 2026-11-07 in `%USERPROFILE%\abf-mod-editor-mcp\server.py` (`export_mod_t3d` now allows `/Engine/Transient/BP_McpProbe*`; original in `server.py.bak`). If the tool is reinstalled, the patch is lost and those tools refuse again.
 - Never T3D-export a `/Game` Blueprint: it crashes the editor. Inspect a game Blueprint's variables through the Details panel of a placed instance during Play instead.
 - `get_actor_label()` is editor-only; labels like `Portal_Fog_Start` don't exist in the shipped game.
