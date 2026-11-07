@@ -20,8 +20,12 @@ _Avoid_: World, level, map, vignette
 The fixed spot in a Portal World where a traveller arrives, the same spot its own portal lands you. A Portal World without an Entrance (Distant Shore, Tile) is not a destination.
 _Avoid_: Spawn, start point, landing
 
+**Portal Anchor**:
+The craftable consumable that, used inside a Portal World, makes that world Anchored. Used up on success.
+_Avoid_: Beacon, key, token
+
 **Anchored**:
-A Portal World is Anchored once someone has used the consumable there. Shared by every player in that save, and permanent.
+A Portal World is Anchored once someone has used a Portal Anchor there. Shared by every player in that save, and permanent.
 _Avoid_: Visited, discovered, unlocked
 
 **Destination**:
