@@ -41,7 +41,7 @@ Checked in the Mod Editor (UE 5.4.4) on 2026-11-07. Re-verify after a game updat
 
 ## Buffs and consumables
 - Consumables apply `ConsumableData.BuffsToAdd` on use. A buff row's `BuffLogic_Object` is a Buff Object Blueprint (child of `BuffObject_ParentBP`, native `BuffDebuffObject`); its `Server_OnBuffApply(Character)` event runs on the server when the buff lands.
-- `LevelManagerSubsystem.FindLatestLevelPlayerIsIn(Player)` gives the player's level as a soft World; compare with `LevelMetadata.Level` via `Conv_SoftObjectReferenceToString`.
+- `LevelManagerSubsystem.FindLatestLevelPlayerIsIn(Player)` gives the player's level as a soft World; compare with `"." + GetLevelFileName(row)` using `EndsWith`. Never compare full paths: in Play In Editor streamed levels are renamed `UEDPIE_0_<Map>` (e.g. `/Game/Maps/UEDPIE_0_V_FOG.V_FOG`), so exact matches fail in testing.
 - `iodinetablets` (`Item_Consumable_Offerable`) is a good non-food consumable template (use or give to another player).
 
 ## Crafting
